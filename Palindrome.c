@@ -1,21 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,factors=0;
-    scanf("%d",&n);
-    for(i=1;i<n;i++)
-    {
-        if(n%i==0)
-        {
-            factors+=i;
-        }
-    }
-    if(factors>n)
-    {
-        printf("True");
-    }
-    else
-    {
-        printf("False");
-    }
+	int n,r,rev=0,t;
+	scanf("%d",&n);
+	t=n;
+	while(n>0)
+	{
+		r=n%10;
+		rev=rev*10+r;
+		n=n/10;
+	}
+	if(rev==t)
+	{
+		printf("True");
+	}
+	else
+	{
+		printf("False");
+	}
 }
